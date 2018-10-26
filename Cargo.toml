@@ -1,0 +1,8 @@
+[package]
+name = "plasma"
+version = "0.1.0"
+authors = ["\"Samuel <samuel.doiron@shopify.com>"]
+
+[dependencies]
+pest = "2.0"
+pest_derive = "2.0"

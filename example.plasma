@@ -1,0 +1,23 @@
+include standard_definitions
+
+define showNames(names)
+  name = 10
+  each name in names
+    %section.container
+      %li= name
+
+define double(x)
+  return x * 2
+
+define myBlock
+  thing = json_parse(block)
+  %p= thing.name
+  %section
+    ...
+
+---
+
+%myBlock
+  name = "Sam"
+  %p Hello
+  %p= name

@@ -1,0 +1,11 @@
+WHITESPACE = _{ " " }
+
+alpha = { 'a'..'z' | 'A'..'Z' }
+digit = _{ '0'..'9' }
+
+number = { digit+ }
+identifier = { alpha ~ (alpha | digit)* }
+
+assignment = { identifier ~ "=" ~ expression }
+expression = _{ number | assignment | identifier }
+expressions = { SOI ~ expression* ~ EOI }
